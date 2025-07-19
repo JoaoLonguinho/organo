@@ -5,7 +5,9 @@ function App() {
   return (
       <section>
         <Banner />
-        <CampoTexto />
+        <CampoTexto label="Nome" ph="Digite seu nome"/>
+        <CampoTexto label="Cargo" ph="Digite seu cargo"/>
+        <CampoTexto label="Imagem" ph="Faça o upload de sua imagem"/>
       </section>
   );
 }
