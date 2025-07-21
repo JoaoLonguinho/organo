@@ -6,7 +6,7 @@ const CampoTexto = (props) => { // Feito de forma diferente, utilizando arrow fu
     return(
         <div className="campo-texto">
             <label htmlFor={props.label}>{props.label}</label>
-            <input type="text" placeholder={props.ph} name={props.label}></input>
+            <input type="text" required={props.obrigatorio} placeholder={props.ph} name={props.label}></input>
         </div>
     )
 }
