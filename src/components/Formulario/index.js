@@ -5,6 +5,9 @@ import './Formulario.css'
 
 const Formulario = () => {
 
+
+   
+
     const times = [
         'Front-end',
         'Back-end',
@@ -23,7 +26,7 @@ const Formulario = () => {
                 <CampoTexto obrigatorio={true} label="Nome" ph="Digite seu nome" />
                 <CampoTexto obrigatorio={true} label="Cargo" ph="Digite seu cargo" />
                 <CampoTexto obrigatorio={false} label="Imagem" ph="Faça o upload de sua imagem" />
-                <ListaSuspensa label="Time" itens={times} />
+                <ListaSuspensa obrigatorio={true} label="Time" itens={times} />
                 <Botao>
                     Criar Card
                 </Botao>
