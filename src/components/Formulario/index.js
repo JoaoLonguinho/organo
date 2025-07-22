@@ -13,9 +13,10 @@ const Formulario = () => {
     const [nome, setNome] = useState("");
     const [cargo, setCargo] = useState("");
     const [imagem, setImagem] = useState("");
+    const [time, setTime] = useState("");
     const aoSalvar = (e) => {
         e.preventDefault()
-        console.log("Form foi submetido", nome, cargo, imagem)
+        console.log("Form foi submetido", nome, cargo, imagem, time)
     }
     return (
         <section className='formulario'>
@@ -24,7 +25,12 @@ const Formulario = () => {
                 <CampoTexto valor={nome} aoAlterado={valor => setNome(valor)} obrigatorio={true} label="Nome" ph="Digite seu nome" />
                 <CampoTexto valor={cargo} aoAlterado={valor => setCargo(valor)} obrigatorio={true} label="Cargo" ph="Digite seu cargo" />
                 <CampoTexto valor={imagem} aoAlterado={valor => setImagem(valor)} obrigatorio={false} label="Imagem" ph="Faça o upload de sua imagem" />
-                <ListaSuspensa obrigatorio={true} label="Time" itens={times} />
+                <ListaSuspensa
+                valor={time}
+                aoAlterado={valor => setTime(valor)}
+                obrigatorio={true} 
+                label="Time" 
+                itens={times} />
                 <Botao>
                     Criar Card
                 </Botao>

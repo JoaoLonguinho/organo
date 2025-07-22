@@ -1,5 +1,3 @@
-
-// import { useState } from 'react'
 import './CampoTexto.css'
 
 const CampoTexto = (props) => { // Feito de forma diferente, utilizando arrow function
