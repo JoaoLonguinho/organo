@@ -1,5 +1,5 @@
 
-import { useState } from 'react'
+// import { useState } from 'react'
 import './CampoTexto.css'
 
 const CampoTexto = (props) => { // Feito de forma diferente, utilizando arrow function
@@ -7,16 +7,16 @@ const CampoTexto = (props) => { // Feito de forma diferente, utilizando arrow fu
 
     // let valorDigitado = 'Uffa'
 
-    const [valorDigitado, setValorDigitado] = useState('teste') // hook
+    // const [valorDigitado, setValorDigitado] = useState('teste') // hook
 
     const aoDigitar = (event) => {
-        setValorDigitado(event.target.value);
-        console.log(valorDigitado)
+        props.aoAlterado(event.target.value);
     }
+    
     return (
         <div className="campo-texto">
             <label htmlFor={props.label}>{props.label}</label>
-            <input value={valorDigitado} type="text" onChange={aoDigitar} required={props.obrigatorio} placeholder={props.ph} name={props.label}></input>
+            <input value={props.valor} type="text" onChange={aoDigitar} required={props.obrigatorio} placeholder={props.ph} name={props.label}></input>
         </div>
     )
 }
