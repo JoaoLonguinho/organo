@@ -33,18 +33,21 @@ const Formulario = (props) => {
                 aoAlterado={valor => setNome(valor)} 
                 obrigatorio={true} 
                 label="Nome" ph="Digite seu nome" />
+
                 <CampoTexto 
                 valor={cargo} 
                 aoAlterado={valor => setCargo(valor)} 
                 obrigatorio={true} 
                 label="Cargo" 
                 ph="Digite seu cargo" />
+                
                 <CampoTexto 
                 valor={imagem} 
                 aoAlterado={valor => setImagem(valor)} 
                 obrigatorio={false} 
                 label="Imagem" 
                 ph="Faça o upload de sua imagem" />
+                
                 <ListaSuspensa
                 valor={time}
                 aoAlterado={valor => setTime(valor)}
