@@ -33,7 +33,7 @@ function App() {
   return (
     <section>
       <Banner />
-      <Formulario aoColaboradorCadastrado={colaboradores => aoNovoColaboradorAdicionado(colaboradores)} />
+      <Formulario times={times.map(time => time.nome)} aoColaboradorCadastrado={colaboradores => aoNovoColaboradorAdicionado(colaboradores)} />
       {times.map(time => <Time key={time.nome} nomeDoTime={time.nome} corPrimaria={time.corPrimaria} corSecundaria={time.corSecundaria}/>)}
     </section>
   );
