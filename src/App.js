@@ -28,13 +28,19 @@ function App() {
 
   const aoNovoColaboradorAdicionado = (colaborador) => {
     console.log(colaborador);
-    setColaboradores([...colaboradores], colaborador);
+    setColaboradores([...colaboradores, colaborador]);
   }
   return (
     <section>
       <Banner />
       <Formulario times={times.map(time => time.nome)} aoColaboradorCadastrado={colaboradores => aoNovoColaboradorAdicionado(colaboradores)} />
-      {times.map(time => <Time key={time.nome} nomeDoTime={time.nome} corPrimaria={time.corPrimaria} corSecundaria={time.corSecundaria}/>)}
+      {times.map(time => <Time 
+      key={time.nome} 
+      nomeDoTime={time.nome} 
+      corPrimaria={time.corPrimaria} 
+      corSecundaria={time.corSecundaria}
+      colaboradores={colaboradores.filter(colaborador => colaborador.time === time.nome)}
+      />)}
     </section>
   );
 }
