@@ -1,0 +1,17 @@
+.rodape{
+    background-color: #6278F7;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 200px;
+    width: 100%;
+}
+.rodape *{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.developed-by{
+    color: white;
+}
