@@ -12,7 +12,7 @@ const Formulario = (props) => {
     const [time, setTime] = useState(props.times[0] || '');
     const aoSalvar = (e) => {
         e.preventDefault();
-        console.log("Form foi submetido", nome, cargo, imagem, time);
+        // console.log("Form foi submetido", nome, cargo, imagem, time);
         props.aoColaboradorCadastrado({
             nome,
             cargo,
@@ -23,8 +23,8 @@ const Formulario = (props) => {
         setCargo('');
         setImagem('');
         setTime('');
-
     }
+    
     return (
         <section className='formulario'>
             <form onSubmit={aoSalvar}>
