@@ -1,4 +1,4 @@
-import './otao.css'
+import './Botao.css'
 
 const Botao = (props) => {
     return(
