@@ -1,4 +1,3 @@
-
 import './ListaSuspensa.css';
 const ListaSuspensa = (props) => {
     return (
@@ -9,11 +8,13 @@ const ListaSuspensa = (props) => {
                 required={props.required}
                 value={props.valor}
             >
+                <option value="">--Selecione--</option>
                 {props.itens.map(item =>
-                    <option key={item} value={item}>{item}</option>)}
+                    <option key={item} value={item}>{item}</option>
+                )}
             </select>
         </div>
     )
 }
 
-export default ListaSuspensa
+export default ListaSuspensa;

@@ -1,8 +1,12 @@
 import "./Colaborador.css";
 
-const Colaborador = ({nome, imagem, cargo, corDeFundo}) =>{
+const Colaborador = ({nome, imagem, cargo, corDeFundo, aoRemover}) =>{
+
+    // Aqui ficará o código em JS pra apagar os colaboradores
+
     return(
         <div className="colaborador">
+            <button onClick={() => aoRemover(nome)}> Remover </button>
             <div className="cabecalho" style={{backgroundColor: corDeFundo}}>
                 <img src={imagem} alt={nome}/>
             </div>

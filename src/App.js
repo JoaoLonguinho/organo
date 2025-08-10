@@ -30,6 +30,10 @@ function App() {
     console.log(colaborador);
     setColaboradores([...colaboradores, colaborador]);
   }
+
+  const aoColaboradorRemovido = (nome) => {
+    setColaboradores(colaboradores.filter(colaborador => colaborador.nome !== nome));
+  }
   return (
       <section>
         <Banner />
@@ -40,6 +44,7 @@ function App() {
         corPrimaria={time.corPrimaria}
         corSecundaria={time.corSecundaria}
         colaboradores={colaboradores.filter(colaborador => colaborador.time === time.nome)}
+        aoColaboradorRemovido={aoColaboradorRemovido}
         />)}
         <Rodape />
       </section>
